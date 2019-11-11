@@ -6,7 +6,7 @@
 
 <style>
     td, th {
-        border: 1px solid; text-align: left; padding: 8px;
+        border: 1px solid white; text-align: left; padding: 8px;
     }
     /*tr:nth-child(odd) {
         background-color: blue;
@@ -19,11 +19,11 @@
         color: black;
     }
 
-    table td#CAT1 {
+    table td#CAT1,th#CAT1 {
         background-color: darkgrey;
     }
 
-    table td,th#CAT2 {
+    table td#CAT2,th#CAT2 {
         background-color: yellow;
     }
 </style>
@@ -45,7 +45,7 @@
         <td colspan="2">Event</td>
         <td style="background-color: white"></td>
         <td colspan="3">Another Event</td>
-        <td colspan="1" onclick="" style="cursor:pointer">Yet Another Event</td>
+        <td colspan="1" onclick="document.location=" style="cursor:pointer">Yet Another Event</td>
     </tr>
     <tr id="ROW2">
         <th scope="row">Lokale 2</th>
@@ -67,7 +67,7 @@
 <table>
 
     <tr>
-        <td><button ID="btnOpenPopupWindow" runat="server" Text="Open Popup Window" onclick="btnOpenPopupWindow_Click"></button></td>
+        <td>Tid</td>
         <th scope="col" style="background-color: aqua">Lokale 1</th>
         <th scope="col" style="background-color:coral">Lokale 2</th>
         <th id="CAT1" scope="col">Lokale 3</th>
