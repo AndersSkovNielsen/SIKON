@@ -2,6 +2,8 @@
     ViewBag.Title = "Test";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model NET_Test.Models.lecture
+
 
 <style>
     td, th {
@@ -81,7 +83,7 @@
         <th scope="row">11:30</th>
         <td rowspan="3">1</td>
         <td rowspan="5">Anders</td>
-        <td id="CAT1" rowspan="4">Gartnervang</td>
+        <td id="CAT1" rowspan="4">@Model.Name</td>
         <td id="CAT2" rowspan="12">Langt foredrag</td>
         <td rowspan="2">5</td>
     </tr>
