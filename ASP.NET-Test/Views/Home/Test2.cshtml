@@ -1,4 +1,4 @@
-﻿
+﻿@model NET_Test.Models.lecture
 @{
     ViewBag.Title = "Test - Anders";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,25 +6,33 @@
 
 <style>
     td, th {
-        border: 1px solid white; text-align: left; padding: 8px;
+        border: 10px solid white;
+        text-align: left;
+        padding: 8px;
     }
     /*tr:nth-child(odd) {
         background-color: blue;
     }*/
     table tr#ROW1 {
-        background-color: aquamarine; color: black;
-    }
-    table tr#ROW2 {
-        background-color:chartreuse;
+        background-color: aquamarine;
         color: black;
     }
 
-    table td#CAT1,th#CAT1 {
+    table tr#ROW2 {
+        background-color: chartreuse;
+        color: black;
+    }
+
+    table td#CAT1, th#CAT1 {
         background-color: darkgrey;
     }
 
-    table td#CAT2,th#CAT2 {
+    table td#CAT2, th#CAT2 {
         background-color: yellow;
+    }
+
+    table td#BLANK, th#BLACK {
+        background-color: gray;
     }
 </style>
 
@@ -76,15 +84,14 @@
     </tr>
     <tr>
         <th scope="row">11:30</th>
-        <td rowspan="3">1</td>
-        <td rowspan="5">Anders</td>
-        <td id="CAT1" rowspan="4">Gartnervang</td>
-        <td id="CAT2">10.000</td>
-        <td rowspan="2">5</td>
+        <td id="BLANK" rowspan="4"></td>
+        <td rowspan="4" style="background-color: crimson"><button ID="btnOpenPopupWindow" runat="server" Text="Open Popup Window" onclick="btnOpenPopupWindow_Click">Anders</button></td>
+        <td id="CAT1" rowspan="4">@Model.Name</td>
+        <td id="CAT2" rowspan="12">BLah</td>
+        <td rowspan="2" style="background-color: hotpink">5</td>
     </tr>
     <tr>
         <th scope="row">12:00</th>
-        <td>10.000</td>
     </tr>
     <tr>
         <th>12:30</th>
@@ -94,6 +101,9 @@
     </tr>
     <tr>
         <th>13:30</th>
+        <td id="BLANK" rowspan="2"></td>
+        <td id="CAT1" rowspan="4">@Model.Name</td>
+        <td rowspan="1" style="background-color: yellowgreen"></td>
     </tr>
     <tr>
         <th>14:00</th>

@@ -35,7 +35,7 @@ namespace ASP.NET_Test.Controllers
 
         public ActionResult Test2()
         {
-            return View();
+            return View(new lecture());
         }
     }
 }
