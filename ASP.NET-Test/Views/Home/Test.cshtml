@@ -2,9 +2,12 @@
     ViewBag.Title = "Test";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model NET_Test.Models.lecture
+@model NET_Test.Models.lecture;
 
-
+<script type="text/javascript">
+    
+    //indsæt javascript her
+</script>
 <style>
     td, th {
         border: 5px solid white;
@@ -83,7 +86,7 @@
         <th scope="row">11:30</th>
         <td rowspan="3">1</td>
         <td rowspan="5">Anders</td>
-        <td id="CAT1" rowspan="4">@Model.Name</td>
+        <td id="CAT1" rowspan="4">@Model.Name;</td>
         <td id="CAT2" rowspan="12">Langt foredrag</td>
         <td rowspan="2">5</td>
     </tr>
@@ -107,7 +110,7 @@
         <th>14:30</th>
     </tr>
     <tr>
-        <th>15:0</th>
+        <th>15:00</th>
     </tr>
     <tr>
         <th>15:30</th>
