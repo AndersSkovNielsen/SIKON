@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Web;
+using ASP.NET_Test.DBUtil;
 
 namespace ASP.NET_Test.Models
 {
@@ -16,9 +17,12 @@ namespace ASP.NET_Test.Models
             set { _name = value; }
         }
 
+        
+
         public lecture()
         {
-            _name = "stimming";
+            Managetest ym= new Managetest();
+            _name = ym.GetAllGuest();
         }
     }
 }
