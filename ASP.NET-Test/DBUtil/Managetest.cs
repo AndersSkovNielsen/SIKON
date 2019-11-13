@@ -12,7 +12,12 @@ namespace ASP.NET_Test.DBUtil
                 @"Server=tcp:myeasjmeasurement.database.windows.net,1433;Initial Catalog=Measurement;Persist Security Info=False;User ID=Fred305c;Password=Password1051;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
             ;
 
+        public string connectionString2 =
+            @"Server=tcp:ande651p-easj-newdbserver.database.windows.net,1433;Initial Catalog=ande651p-dissertation;Persist Security Info=False;User ID=asn230791;Password=No19Pass;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
         private string GetAllString = "select id_num, fname from mytestTable";
+
+        private string GetAllString2 = "select Id, Name from TestTable";
         //private static int GivenNo;
 
         //private string GetGuestFromIDString = "select * from DemoGuest where Guest_No=" + $"{GivenNo}";
@@ -30,10 +35,10 @@ namespace ASP.NET_Test.DBUtil
         {
             //List<Guest> TheGuestlist = new List<Guest>();
             string retvalue = "";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString2))
             {
 
-                SqlCommand command = new SqlCommand(GetAllString, connection);
+                SqlCommand command = new SqlCommand(GetAllString2, connection);
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
